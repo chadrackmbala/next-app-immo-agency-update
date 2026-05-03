@@ -12,7 +12,7 @@ function OffreImmobilierePage() {
   return (
     <div>
       <ScrollFadeIn>
-        <p className="text-sm uppercase tracking-[0.3em] text-[#BFA75C]">Offre Immobilière</p>
+        <p className="text-sm uppercase tracking-[0.3em] mx-20 my-10 text-[#BFA75C]">Offre Immobilière</p>
         {/* <h2 className='text-4xl text-center mt-20 mb-5 lg:my-20 font-bold'>Offre Immobilière</h2> */}
         <div className='lg:text-xl mx-10 flex flex-col lg:flex-row lg:items-center lg:justify-center lg:w-[1100px] lg:mx-auto'>
 
