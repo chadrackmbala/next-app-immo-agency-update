@@ -1,7 +1,12 @@
 self.__BUILD_MANIFEST = {
   "__rewrites": {
     "afterFiles": [],
-    "beforeFiles": [],
+    "beforeFiles": [
+      {
+        "source": "/next-app-immo-agency-update//_next/:path+",
+        "destination": "/next-app-immo-agency-update/_next/:path+"
+      }
+    ],
     "fallback": []
   },
   "sortedPages": [
