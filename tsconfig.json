@@ -29,6 +29,6 @@
     ".next/types/**/*.ts",
     ".next/dev/types/**/*.ts",
     "**/*.mts"
-  ],
+, "../../Immo-Agency/src/Provider.tsx", "../../Immo-Agency/src/ScrollFadeIn.tsx"  ],
   "exclude": ["node_modules"]
 }
