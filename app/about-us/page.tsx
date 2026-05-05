@@ -11,7 +11,7 @@ const Images = [
 
 function AboutUs() {
   return (
-    <div className='px-10 mt-20'>
+    <div className='px-10 mt-20 pb-10'>
 
       {/* Qui sommes-nous */}
       <div className='mb-20 flex flex-col lg:flex-row lg:gap-10 lg:items-center'>
