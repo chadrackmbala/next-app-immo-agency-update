@@ -12,9 +12,11 @@ function OffreImmobilierePage() {
   return (
     <div>
       <ScrollFadeIn>
-        <p className="text-sm uppercase tracking-[0.3em] mx-20 my-10 text-[#BFA75C]">Offre Immobilière</p>
+        <p className="text-2xl uppercase tracking-[0.3em] my-7 text-[#BFA75C] text-center lg:text-left lg:mx-20">
+          Offre Immobilière
+        </p>
         {/* <h2 className='text-4xl text-center mt-20 mb-5 lg:my-20 font-bold'>Offre Immobilière</h2> */}
-        <div className='lg:text-xl mx-10 flex flex-col lg:flex-row lg:items-center lg:justify-center lg:w-[1100px] lg:mx-auto'>
+        <div className='lg:text-xl mx-10 flex flex-col lg:flex-row lg:items-center lg:justify-center lg:w-[1100px] lg:mx-auto mb-15'>
 
           {/* Texte */}
           <div className='lg:w-1/2 flex flex-col'>
@@ -57,11 +59,11 @@ function OffreImmobilierePage() {
               />
             </ScrollFadeIn>
           </div>
-
         </div>
-
         <ScrollFadeIn>
-          <h2 className='text-3xl text-center mt-10 mb-5 lg:my-20 font-bold mx-4'>Comment ça marche ?</h2>
+          <h2 className="text-2xl uppercase tracking-[0.3em] my-7 text-[#BFA75C] text-center lg:text-left lg:mx-20">
+          Comment ça marche ?
+        </h2>
         </ScrollFadeIn>
         <ScrollFadeIn>
           <div className='mx-10 lg:w-[1100px] flex flex-col lg:flex-row  lg:gap-60 lg:mx-auto lg:text-xl'>

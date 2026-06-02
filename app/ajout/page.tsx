@@ -10,6 +10,8 @@ import InputLabel from "@mui/material/InputLabel";
 import Select from "@mui/material/Select";
 import UploadMedia from "../components/UploadMedia";
 import { ScrollFadeIn } from "../components/ScrollFadeIn";
+import Formulaire from "@/components/Formulaire";
+import SavingForm from "@/components/SavingForm";
 
 const communes = [
   { value: "ngaliema", label: "Ngaliema" },
@@ -117,6 +119,7 @@ export default function AjoutPage() {
 
   return (
     <section className="min-h-screen bg-[var(--app-bg)] text-[var(--app-text)] py-10 px-4 sm:px-8">
+      <Formulaire />
       <div className="mx-auto max-w-6xl">
         <ScrollFadeIn>
           <div className="mb-10 rounded-[28px] border border-slate-700 bg-[var(--surface-variant)]/80 p-8 shadow-[0_40px_120px_rgba(0,0,0,0.35)] backdrop-blur-xl lg:p-12">
@@ -270,6 +273,7 @@ export default function AjoutPage() {
           </div>
         </form>
       </div>
+      <SavingForm />
     </section>
   );
 }

@@ -5,7 +5,8 @@ const useProductsStore = create((set) => ({
     products: [],
     async getProductData() {
         try {
-            const response = await axios.get('https://65b7cc9846324d531d558a48.mockapi.io/loangoserver');
+            // API interne Next.js App Router
+            const response = await axios.get('/api/produits');
             set({ products: response.data }); // <-- ici products, pas product
             // console.log(response.data);
         } catch (error) {

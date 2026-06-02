@@ -16,50 +16,41 @@ function AboutUs() {
       <div className='mb-20 flex flex-col lg:flex-row lg:gap-10 lg:items-center'>
         <div className='lg:w-1/2'>
           <ScrollFadeIn>
-            <div className="overflow-hidden rounded-[15px]">
-              <img
-                src={Images[0].src}
-                alt="Notre Mission"
-                className="image-zoom h-60 w-full rounded-[15px] lg:h-80 lg:w-full object-cover"
-              />
-            </div>
+            <img
+              src={Images[0].src}
+              alt="Notre Mission"
+              className="h-60 w-full rounded-[15px] lg:h-80 lg:w-full object-cover"
+            />
           </ScrollFadeIn>
         </div>
-
         <div className='lg:w-1/2'>
           <ScrollFadeIn>
-            <h2 className="text-2xl uppercase tracking-[0.3em] text-[#BFA75C] text-center lg:text-left mt-5 lg:mt-0">
-              Qui sommes-nous ?
-            </h2>
+            <h2 className="text-2xl uppercase tracking-[0.3em] text-[#BFA75C] text-center lg:text-left mt-5 lg:mt-0">Qui sommes-nous ?</h2>
           </ScrollFadeIn>
-
           <ScrollFadeIn>
             <p className='mt-5 text-center lg:text-left'>
-              <span className='font-bold text-[#E9CD73] text-2xl'>Immo 24</span> est une agence immobilière 100 % en ligne,
-              dédiée à la simplification de la recherche et de l’investissement
+              <span className='font-bold text-[#E9CD73] text-2xl'>Immo 24</span> est une agence immobilière 100 % en ligne, 
+              dédiée à la simplification de la recherche et de l’investissement 
               immobilier au cœur de Kinshasa.<br />
-              Nous vous accompagnons à chaque étape du processus, en toute
-              simplicité, qu’il s’agisse de l’achat, de la vente ou de la
+              Nous vous accompagnons à chaque étape du processus, en toute 
+              simplicité, qu’il s’agisse de l’achat, de la vente ou de la 
               location de maisons, bureaux, appartements ou terrains.<br />
-              Nous prenons également en charge l’ensemble des démarches
-              administratives et juridiques, afin de vous offrir une expérience
+              Nous prenons également en charge l’ensemble des démarches 
+              administratives et juridiques, afin de vous offrir une expérience 
               sécurisée et sans stress.<br />
-              Notre équipe d’agents immobiliers expérimentés est pleinement engagée
+              Notre équipe d’agents immobiliers expérimentés est pleinement engagée 
               à vous fournir un service professionnel et de qualité à chaque étape.
             </p>
           </ScrollFadeIn>
         </div>
       </div>
-
       {/* Nos Valeurs */}
       <div className="mb-20 flex flex-col lg:flex-row lg:gap-10 lg:items-center">
+        {/* Texte */}
         <div className="order-2 lg:order-1 lg:w-1/2">
           <ScrollFadeIn>
-            <h2 className="text-2xl uppercase tracking-[0.3em] text-[#BFA75C] text-center lg:text-left mt-5 lg:mt-0">
-              Nos Valeurs
-            </h2>
+            <h2 className="text-2xl uppercase tracking-[0.3em] text-[#BFA75C] text-center lg:text-left mt-5 lg:mt-0">Nos Valeurs</h2>
           </ScrollFadeIn>
-
           <ScrollFadeIn>
             <p className="mt-5 text-center lg:text-left">
               ✔ <span className='font-bold'>Accessibilité : </span>
@@ -80,16 +71,14 @@ function AboutUs() {
             </p>
           </ScrollFadeIn>
         </div>
-
+        {/* Image */}
         <div className="order-1 lg:order-2 lg:w-1/2">
           <ScrollFadeIn>
-            <div className="overflow-hidden rounded-[15px]">
-              <img
-                src={Images[1].src}
-                alt="Nos Valeurs"
-                className="image-zoom h-60 w-full rounded-[15px] lg:h-80 lg:w-full object-cover"
-              />
-            </div>
+            <img
+              src={Images[1].src}
+              alt="Nos Valeurs"
+              className="h-60 w-full rounded-[15px] lg:h-80 lg:w-full object-cover"
+            />
           </ScrollFadeIn>
         </div>
       </div>
@@ -98,23 +87,19 @@ function AboutUs() {
       <div className='lg:flex lg:gap-10 lg:items-center'>
         <div className='lg:w-1/2'>
           <ScrollFadeIn>
-            <div className="overflow-hidden rounded-[15px]">
-              <img
-                src={Images[2].src}
-                alt="Notre Mission"
-                className="image-zoom h-60 w-full rounded-[15px] lg:h-80 lg:w-full object-cover"
-              />
-            </div>
+            <img
+              src={Images[2].src}
+              alt="Notre Mission"
+              className="h-60 w-full rounded-[15px] lg:h-80 lg:w-full object-cover"
+            />
           </ScrollFadeIn>
         </div>
 
+
         <div className='lg:w-1/2'>
           <ScrollFadeIn>
-            <h2 className="text-2xl uppercase tracking-[0.3em] text-[#BFA75C] text-center lg:text-left mt-5 lg:mt-0">
-              Notre Mission
-            </h2>
+            <h2 className="text-2xl uppercase tracking-[0.3em] text-[#BFA75C] text-center lg:text-left mt-5 lg:mt-0">Notre Mission</h2>
           </ScrollFadeIn>
-
           <ScrollFadeIn>
             <p className='mt-5 text-center lg:text-left'>
               Faciliter l’accès à l’immobilier à Kinshasa en
@@ -127,13 +112,11 @@ function AboutUs() {
 
       {/* Notre Vision */}
       <div className="mt-20 flex flex-col lg:flex-row lg:gap-10 lg:items-center">
+        {/* Texte */}
         <div className="order-2 lg:order-1 lg:w-1/2">
           <ScrollFadeIn>
-            <h2 className="text-2xl uppercase tracking-[0.3em] text-[#BFA75C] text-center lg:text-left mt-5 lg:mt-0">
-              Notre Vision
-            </h2>
+            <h2 className="text-2xl uppercase tracking-[0.3em] text-[#BFA75C] text-center lg:text-left mt-5 lg:mt-0">Notre Vision</h2>
           </ScrollFadeIn>
-
           <ScrollFadeIn>
             <p className="mt-5 text-center lg:text-left">
               Devenir la référence de l’immobilier digital à Kinshasa
@@ -142,16 +125,14 @@ function AboutUs() {
             </p>
           </ScrollFadeIn>
         </div>
-
+        {/* Image */}
         <div className="order-1 lg:order-2 lg:w-1/2">
           <ScrollFadeIn>
-            <div className="overflow-hidden rounded-[15px]">
-              <img
-                src={Images[3].src}
-                alt="Nos Valeurs"
-                className="image-zoom h-60 w-full rounded-[15px] lg:h-80 lg:w-full object-cover"
-              />
-            </div>
+            <img
+              src={Images[3].src}
+              alt="Nos Valeurs"
+              className="h-60 w-full rounded-[15px] lg:h-80 lg:w-full object-cover"
+            />
           </ScrollFadeIn>
         </div>
       </div>
