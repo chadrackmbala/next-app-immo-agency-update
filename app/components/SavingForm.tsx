@@ -153,7 +153,7 @@ export default function SavingForm() {
             });
 
             const res = await fetch(
-                "http://localhost:3001/produits",
+                `${process.env.NEXT_PUBLIC_API_URL}/produits`,
                 {
                     method: "POST",
                     body: data,
