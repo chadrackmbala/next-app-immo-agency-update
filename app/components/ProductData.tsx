@@ -26,6 +26,8 @@ function ProductData() {
         // const response = await fetch(
         //   "http://localhost:3001/produits"
         // );
+
+        console.log(process.env.NEXT_PUBLIC_API_URL);
         const response = await fetch(
           `${process.env.NEXT_PUBLIC_API_URL}/produits`
         );
@@ -90,7 +92,7 @@ function ProductData() {
               <div className="group cursor-pointer overflow-hidden rounded-[15px] bg-white shadow-[0_4px_15px_rgba(0,0,0,0.1)] transition-transform duration-300 hover:scale-105 hover:shadow-[0_8px_30px_rgba(0,0,0,0.2)]">
                 <div className="overflow-hidden">
                   <img
-                    src={`http://localhost:3001${produit.image}`}
+                    src={`${process.env.NEXT_PUBLIC_API_URL}${produit.image}`}
                     alt={produit.titre}
                     className="h-60 w-full object-cover transition-transform duration-500 ease-out group-hover:scale-110"
                   />

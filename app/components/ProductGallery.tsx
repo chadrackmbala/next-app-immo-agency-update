@@ -44,7 +44,7 @@ export default function ProductGallery({
       {images.map((item, index) => (
         <img
           key={index}
-          src={`http://localhost:3001${item.image}`}
+          src={`${process.env.NEXT_PUBLIC_API_URL}${item.image}`}
           alt={`${titre} ${index + 1}`}
           onClick={() => setSelectedIndex(index)}
           className="h-64 w-full cursor-pointer rounded-2xl object-cover transition duration-300 hover:scale-[1.02]"
@@ -75,7 +75,7 @@ export default function ProductGallery({
             </button>
 
             <img
-              src={`http://localhost:3001${images[selectedIndex].image}`}
+              src={`${process.env.NEXT_PUBLIC_API_URL}${images[selectedIndex].image}`}
               alt={`${titre} ${selectedIndex + 1}`}
               className="h-[80vh] w-[95vw] max-w-[1400px] rounded-2xl object-contain shadow-2xl"
             />

@@ -13,7 +13,7 @@ export default async function ProductDetails({
 
   try {
     const response = await fetch(
-      `http://localhost:3001/produits/${id}`,
+      `${process.env.NEXT_PUBLIC_API_URL}/produits/${id}`,
       {
         cache: "no-store",
       }
@@ -37,7 +37,7 @@ export default async function ProductDetails({
           <div className="overflow-hidden rounded-3xl bg-white shadow-xl">
             {/* IMAGE PRINCIPALE */}
             <img
-              src={`http://localhost:3001${produit.image}`}
+              src={`${process.env.NEXT_PUBLIC_API_URL}${produit.image}`}
               alt={produit.titre}
               className="h-[500px] w-full object-cover"
             />
