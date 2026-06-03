@@ -23,8 +23,11 @@ function ProductData() {
   useEffect(() => {
     const loadProducts = async () => {
       try {
+        // const response = await fetch(
+        //   "http://localhost:3001/produits"
+        // );
         const response = await fetch(
-          "http://localhost:3001/produits"
+          `${process.env.NEXT_PUBLIC_API_URL}/produits`
         );
 
         if (!response.ok) {
