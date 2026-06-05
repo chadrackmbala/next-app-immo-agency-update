@@ -1,6 +1,6 @@
 "use client";
 
-import { useEffect, useState } from "react";
+import { useEffect, useState, useRef } from "react";
 import { useParams, useRouter } from "next/navigation";
 
 import TextField from "@mui/material/TextField";
@@ -33,6 +33,13 @@ type FormValues = {
 };
 
 export default function EditProduitPage() {
+
+    const fileInputRef =
+        useRef<HTMLInputElement>(null);
+
+    const [newImages, setNewImages] =
+        useState<File[]>([]);
+
     const [images, setImages] =
         useState<ProduitImage[]>([]);
 
@@ -154,10 +161,61 @@ export default function EditProduitPage() {
         fetchProduit();
     }, []);
 
+    const handleAddImages = async () => {
+        try {
+            console.log("Images :", newImages);
+
+            if (newImages.length === 0) {
+                console.log("Aucune image sélectionnée");
+                return;
+            }
+
+            const formData = new FormData();
+
+            newImages.forEach((file) => {
+                formData.append("images", file);
+            });
+
+            const response = await fetch(
+                `${process.env.NEXT_PUBLIC_API_URL}/produits/${id}/images`,
+                {
+                    method: "POST",
+                    body: formData,
+                }
+            );
+
+            console.log("Status :", response.status);
+
+            const result = await response.text();
+
+            console.log("Réponse serveur :", result);
+
+            if (!response.ok) {
+                throw new Error("Erreur ajout images");
+            }
+
+            setNewImages([]);
+
+            await fetchProduit();
+        } catch (error) {
+            console.error(error);
+        }
+    };
+
     const fetchProduit = async () => {
         try {
+
+            console.log(
+                "URL :",
+                `${process.env.NEXT_PUBLIC_API_URL}/produits/${id}`
+            );
             const response = await fetch(
                 `${process.env.NEXT_PUBLIC_API_URL}/produits/${id}`
+            );
+
+            console.log(
+                "Response status :",
+                response.status
             );
 
             const data =
@@ -189,11 +247,6 @@ export default function EditProduitPage() {
     const handleDeleteImage = async (
         imageId: number
     ) => {
-        const confirmed = window.confirm(
-            "Supprimer cette image ?"
-        );
-
-        if (!confirmed) return;
 
         try {
             const response = await fetch(
@@ -230,10 +283,6 @@ export default function EditProduitPage() {
             );
         } catch (error) {
             console.error(error);
-
-            alert(
-                "Impossible de supprimer cette image."
-            );
         }
     };
 
@@ -548,6 +597,118 @@ export default function EditProduitPage() {
                                     ))}
                                 </div>
                             )}
+                        </div>
+
+                        <div className="mt-8 rounded-2xl border border-slate-200 p-4">
+                            <h3 className="mb-4 text-xl font-semibold text-slate-900">
+                                Ajouter des images
+                            </h3>
+
+                            <input
+                                ref={fileInputRef}
+                                type="file"
+                                multiple
+                                accept="image/*"
+                                hidden
+                                onChange={async (e) => {
+                                    const files = e.target.files;
+
+                                    if (!files) return;
+
+                                    const selectedFiles =
+                                        Array.from(files);
+
+                                    setNewImages(
+                                        selectedFiles
+                                    );
+
+                                    try {
+                                        const formData =
+                                            new FormData();
+
+                                        selectedFiles.forEach(
+                                            (file) => {
+                                                formData.append(
+                                                    "images",
+                                                    file
+                                                );
+                                            }
+                                        );
+
+                                        const response =
+                                            await fetch(
+                                                `${process.env.NEXT_PUBLIC_API_URL}/produits/${id}/images`,
+                                                {
+                                                    method: "POST",
+                                                    body: formData,
+                                                }
+                                            );
+
+                                        if (!response.ok) {
+                                            throw new Error(
+                                                "Erreur upload"
+                                            );
+                                        }
+
+                                        setNewImages([]);
+
+                                        await fetchProduit();
+                                    } catch (error) {
+                                        console.error(error);
+                                    }
+                                }}
+                            />
+
+                            {newImages.length > 0 && (
+                                <p className="mt-3 text-sm text-slate-500">
+                                    {newImages.length} image(s)
+                                    sélectionnée(s)
+                                </p>
+                            )}
+
+                            {/* <Button
+                                    variant="outlined"
+                                    onClick={() =>
+                                        fileInputRef.current?.click()
+                                    }
+                                    sx={{
+                                        textTransform: "none",
+                                        borderRadius: "12px",
+                                    }}
+                                >
+                                    Choisir des images
+                                </Button> */}
+
+                            <Button
+                                variant="outlined"
+                                sx={{
+                                    textTransform: "none",
+                                    borderRadius: "12px",
+                                }}
+                                onClick={() =>
+                                    fileInputRef.current?.click()
+                                }
+                            >
+                                Ajouter des images
+                            </Button>
+
+                            {newImages.length > 0 && (
+                                <div className="mt-4 grid grid-cols-2 md:grid-cols-4 gap-4">
+                                    {newImages.map(
+                                        (file, index) => (
+                                            <img
+                                                key={index}
+                                                src={URL.createObjectURL(
+                                                    file
+                                                )}
+                                                alt=""
+                                                className="h-32 w-full rounded-xl object-cover"
+                                            />
+                                        )
+                                    )}
+                                </div>
+                            )}
+
                         </div>
 
                         <Button
