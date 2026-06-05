@@ -3,7 +3,7 @@ export default function DocumentationPage() {
     <section className="min-h-screen bg-[var(--app-bg)] text-[var(--app-text)] p-8">
       <div className="mx-auto max-w-6xl space-y-16">
         <header className="space-y-4">
-          <p className="text-2xl uppercase tracking-[0.3em] text-[#BFA75C]">Documentation & ressources</p>
+          <p className="text-2xl uppercase tracking-[0.3em] text-[#BFA75C] text-center">Documentation & ressources</p>
           <h1 className="text-3xl lg:text-5xl font-bold">Immobilier, partenariat public et accompagnement stratégique</h1>
           <p className="max-w-3xl text-lg leading-8 text-slate-400">
             Découvrez nos bonnes pratiques, nos engagements et les alliances stratégiques qui renforcent la confiance de nos clients et partenaires au Congo.

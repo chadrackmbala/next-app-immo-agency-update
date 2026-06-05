@@ -61,9 +61,10 @@ function OffreImmobilierePage() {
           </div>
         </div>
         <ScrollFadeIn>
-          <h2 className="text-2xl uppercase tracking-[0.3em] my-7 text-[#BFA75C] text-center lg:text-left lg:mx-20">
-          Comment ça marche ?
-        </h2>
+          <h2 className="text-2xl uppercase tracking-[0.3em] my-7 text-[#BFA75C] text-center max-w-[250px] mx-auto">
+            Comment ça <br />
+            marche ?
+          </h2>
         </ScrollFadeIn>
         <ScrollFadeIn>
           <div className='mx-10 lg:w-[1100px] flex flex-col lg:flex-row  lg:gap-60 lg:mx-auto lg:text-xl'>
