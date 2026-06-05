@@ -113,7 +113,7 @@ function NavLinks({ mobile = false, onLinkClick }: NavLinksProps) {
                 Documentation
             </Link>
 
-            <Link href="/ajout" scroll={true} className={linkClass("/ajout")} onClick={handleLinkClick}>
+            <Link href="/admin/produits" scroll={true} className={linkClass("/admin/produits")} onClick={handleLinkClick}>
                 Gestion de contenu
             </Link>
 
